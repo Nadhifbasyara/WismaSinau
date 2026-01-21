@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Wisma Sinau - Sign In</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main class="page">
+            <!-- Kiri (ilustrasi)-->
+             <section class="hero" aria-hidden="true"></section>
+
+            <!-- Kanan (judul + card login-->
+             <section class="right">
+                <header class="welcome">
+                    <h1>Welcome Back to<br><span>Wisma Sinau</span></h1>
+                </header>
+
+                <div class="card" role="region" aria-label="Sign In Card">
+                    <h2>Sign In</h2>
+
+                    <div class="social">
+                        <button class="btn btn-outline" type="button" id="googleBtn">
+                            <span class="icon">
+                                <!-- Google Icon (simple SVG) -->
+                                 <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                                    <path d="M21.8 12.2c0-.7-.1-1.2-.2-1.8H12v3.4h5.5c-.1.9-.8.2.2-2.2 3.1v2.3h3.5c2.1-1.9 3.2-4.7 3.2-8z" fill="#4285F4"/>
+                                    <path d="M12 22c2.8 0 5.2-.9 6.9-2.5l-3.5-2.3c-.9.6-2.1 1-3.4 1-2.7 0-5-1.8-5.8-4.3H2.6v2.4C4.3 19.5 7.9 22 12 22z" fill="#34A853"/>
+                                    <path d="M6.2 13.9c-.2-.6-.3-1.2-.3-1.9s.1-1.3.3-1.9V7.7H2.6C1.9 9.1 1.5 10.5 1.5 12s.4 2.9 1.1 4.3l3.6-2.4z" fill="#FBBC05"/>
+                                    <path d="M12 5.8c1.5 0 2.5.6 3.1 1.2l2.3-2.2C15.9 3.4 14.3 2.5 12 2.5 7.9 2.5 4.3 5 2.6 8.7l3.6 2.4C7 7.6 9.3 5.8 12 5.8z" fill="#EA4335"/>
+                                 </svg>
+                            </span>
+                            <span>Continue with Google</span>
+                        </button>
+
+                        <div class="social-icons">
+                            <button class="icon-btn" type="button" aria-label="Continue with Facebook" id="fbBtn">
+                                <!-- Facebook -->
+                                 <svg viewBox="0 0 24 24" width="28" height="18" aria-hidden="true">
+                                    <path d="M14 8.7V7.1c0-.7.5-.9 1-.9h1.8V3.5H14c-2.8 0-4.1 1.9-4.1 4.1v1.1H8v2.8h1.9V21h3.1v-9.5h2.7l.4-2.8H14z" fill="currentColor"/>
+                                 </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <form id="loginForm" novalidate>
+                        <div class="field">
+                            <label for="email">Email Address</label>
+                            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" />
+                            <small class="eror" id="emailErr"></small>
+                        </div>
+
+                        <div class="field">
+                            <label for="password">Password</label>
+                            <div class="password-wrap">
+                                <input id="password" name="password" type="password" placeholder="••••••••" autocomplete="current-password" />
+                                <button class="toogle" type="button" id="togglePwd">Show</button>
+                            </div>
+                            <small class="eror" id="passErr"></small>
+
+                            <div class="meta">
+                                <a class="link" href="#" id="forgotLink">Forgot Password</a>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary" type="submit">Sign In</button>
+
+                        <p class="foot">
+                            Don't have an account? <a class="link" href="#" id="signUpLink">Sign Up</a>
+                        </p>
+
+                        <p class="message" id="message" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+             </section>
+        </main>
+
+        <script src="app.js"></script>
+    </body>
+</html>
