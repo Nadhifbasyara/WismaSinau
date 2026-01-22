@@ -27,10 +27,12 @@ function clearInvalid(input, errEl){
     errEl.textContent = "";
 }
 
-togglePwd.addEventListener("click", ()=>{
-    const isHidden = password.type === "password";
-    password.type = isHidden ? "text" : "password";
-    togglePwd.textContent = isHidden ? "Hide" : "Show";
+togglePwd.addEventListener("click", () => {
+  const isHidden = password.type === "password";
+  password.type = isHidden ? "text" : "password";
+
+  togglePwd.classList.toggle("is-on", isHidden);
+  togglePwd.setAttribute("aria-label", isHidden ? "Sembunyikan password" : "Tampilkan password");
 });
 
 forgotLink.addEventListener("click", (e)=>{
@@ -83,9 +85,14 @@ form.addEventListener("submit", (e)=>{
     const isDemo = (emailVal.toLowerCase() === "demo@wismasinau.id" && passVal === "123456");
 
     if(isDemo){
-        message.textContent = "Login berhasil! Mengarahkan ke dashboard...";
-        // contoh redirect
-        setTimeout(()=> window.location.href = "dashboard.html", 700);
+        // simpan session sederhana
+        localStorage.setItem("ws_auth", JSON.stringify({
+            email: emailVal,
+            loginAt: Date.now()
+        }));
+
+        message.textContent = "Login berhasil. Mengarahkan ke Home...";
+        setTimeout(() => window.location.href = "home.html", 700);
     } else {
         message.textContent = "Login diterima (mode demo). Hubungkan ke backend untuk validasi asli.";
     }
