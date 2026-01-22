@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wisma Sinau — Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="ws-landing">
+    <!-- NAVBAR STICKY -->
+    <header class="ws-header">
+      <div class="ws-nav">
+        <a class="ws-brand" href="home.html">
+          <span class="ws-mark">WS</span>
+          <span class="ws-brand-name">Wisma Sinau</span>
+        </a>
+
+        <button class="ws-burger" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="ws-menu" id="navMenu">
+          <a class="ws-link active" href="#home">Home</a>
+          <a class="ws-link" href="#program">Program</a>
+          <a class="ws-link" href="#tryout">Try Out</a>
+          <a class="ws-link" href="#ebook">Ebook</a>
+          <a class="ws-link" href="#profile">Profile</a>
+
+          <div class="ws-nav-right">
+            <div class="ws-search">
+              <input id="searchInput" type="text" placeholder="Cari materi..." />
+            </div>
+            <button class="ws-btn ws-btn-outline" type="button" id="buyBtn">Ambil Paket</button>
+            <button class="ws-btn ws-btn-primary" type="button" id="logoutBtn">Logout</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="ws-hero" id="home">
+      <div class="ws-hero-inner">
+        <div class="ws-hero-left">
+          <h1 class="ws-h1">
+            Belajar <span>Bahasa Inggris</span><br/>
+            Biar beneran <span>ngerti</span>, bukan cuma hafal.
+          </h1>
+
+          <p class="ws-lead">
+            Kelas untuk <b>SD</b>, <b>SMP</b>, <b>SMA</b>, sampai <b>TOEFL</b>.
+            Materi video, latihan soal, dan pembahasan yang gampang dipahami.
+          </p>
+
+          <div class="ws-cta">
+            <a class="ws-btn ws-btn-primary" href="#program">Lihat Program</a>
+            <a class="ws-btn ws-btn-outline" href="#ebook">Lihat Ebook</a>
+          </div>
+
+          <div class="ws-mini">
+            <div class="ws-pill">✅ Video singkat & jelas</div>
+            <div class="ws-pill">✅ Latihan & pembahasan</div>
+            <div class="ws-pill">✅ Progress tracking</div>
+          </div>
+        </div>
+
+        <div class="ws-hero-right" aria-hidden="true">
+          <div class="ws-slider">
+            <div class="ws-slide ws-slide-img ws-slide-sd">
+              <div class="ws-slide-title">English for Kids (SD)</div>
+              <div class="ws-slide-sub">Vocabulary + speaking fun</div>
+            </div>
+
+            <div class="ws-slide ws-slide-img ws-slide-smp">
+              <div class="ws-slide-title">SMP — Grammar Basics</div>
+              <div class="ws-slide-sub">Tenses, reading, writing</div>
+            </div>
+
+            <div class="ws-slide ws-slide-img ws-slide-sma">
+              <div class="ws-slide-title">SMA — Exam Ready</div>
+              <div class="ws-slide-sub">Text types & practice</div>
+            </div>
+
+            <div class="ws-slide is-active ws-slide-toefl">
+              <div class="ws-slide-title">TOEFL Prep</div>
+              <div class="ws-slide-sub">Structure, reading, listening</div>
+            </div>
+
+            <div class="ws-dots" id="dots" aria-hidden="true"></div>
+            <button class="ws-arrow left" id="prevSlide" aria-label="Prev">‹</button>
+            <button class="ws-arrow right" id="nextSlide" aria-label="Next">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAM (accordion style) -->
+    <section class="ws-section" id="program">
+      <div class="ws-container">
+        <h2 class="ws-h2">Program Belajar</h2>
+        <p class="ws-sub">
+          Pilih jenjang kamu. Setiap program punya video materi, latihan, dan roadmap belajar.
+        </p>
+
+        <div class="ws-accordion">
+          <details class="ws-item" open>
+            <summary>
+              <div class="ws-item-title">SD — English for Kids</div>
+              <div class="ws-item-meta">Alphabet • Vocabulary • Speaking</div>
+            </summary>
+            <div class="ws-item-body">
+              <ul>
+                <li>Daily vocabulary & pronunciation</li>
+                <li>Simple conversation & storytelling</li>
+                <li>Quiz ringan & games</li>
+              </ul>
+              <button class="ws-btn ws-btn-primary small" type="button">Buka Materi SD</button>
+            </div>
+          </details>
+
+          <details class="ws-item">
+            <summary>
+              <div class="ws-item-title">SMP — Grammar & Reading</div>
+              <div class="ws-item-meta">Tenses • Text • Writing</div>
+            </summary>
+            <div class="ws-item-body">
+              <ul>
+                <li>Tenses & sentence building</li>
+                <li>Reading comprehension</li>
+                <li>Latihan soal + pembahasan</li>
+              </ul>
+              <button class="ws-btn ws-btn-primary small" type="button">Buka Materi SMP</button>
+            </div>
+          </details>
+
+          <details class="ws-item">
+            <summary>
+              <div class="ws-item-title">SMA — Exam Ready</div>
+              <div class="ws-item-meta">Text types • Strategy • Practice</div>
+            </summary>
+            <div class="ws-item-body">
+              <ul>
+                <li>Text types (narrative, report, dll.)</li>
+                <li>Vocabulary for exams</li>
+                <li>Tryout mini & evaluasi</li>
+              </ul>
+              <button class="ws-btn ws-btn-primary small" type="button">Buka Materi SMA</button>
+            </div>
+          </details>
+
+          <details class="ws-item">
+            <summary>
+              <div class="ws-item-title">TOEFL Preparation</div>
+              <div class="ws-item-meta">Structure • Reading • Listening</div>
+            </summary>
+            <div class="ws-item-body">
+              <ul>
+                <li>Grammar patterns yang sering keluar</li>
+                <li>Strategi reading cepat</li>
+                <li>Latihan listening & pembahasan</li>
+              </ul>
+              <button class="ws-btn ws-btn-primary small" type="button">Buka TOEFL</button>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRYOUT -->
+    <section class="ws-section" id="tryout">
+      <div class="ws-container">
+        <div class="ws-banner">
+          <div>
+            <h3 class="ws-h3">Try Out Bahasa Inggris</h3>
+            <p class="ws-sub2">Latihan soal terstruktur + pembahasan, biar siap ujian.</p>
+          </div>
+          <button class="ws-btn ws-btn-outline" type="button">Mulai Try Out</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES (3 cards like reference) -->
+    <section class="ws-section">
+      <div class="ws-container">
+        <h2 class="ws-h2">Materi Video & Latihan Soal</h2>
+        <p class="ws-sub">
+          Penjelasan yang bikin kamu “oh, ngerti!” + latihan yang langsung dikasih pembahasan.
+        </p>
+
+        <div class="ws-cards">
+          <article class="ws-card">
+            <h3>Oh, ngerti!</h3>
+            <p>
+              Kamu nggak cuma dikasih rumus/aturan, tapi diajak paham konsep step by step
+              sampai dapet “aha moment”.
+            </p>
+            <div class="ws-card-foot">📌 Penjelasan konsep</div>
+          </article>
+
+          <article class="ws-card">
+            <h3>Gampang dipraktekin</h3>
+            <p>
+              Tutor jelasin pakai bahasa sederhana, contoh sehari-hari, dan latihan yang bertahap
+              dari mudah ke sulit.
+            </p>
+            <div class="ws-card-foot">🧩 Contoh & latihan</div>
+          </article>
+
+          <article class="ws-card">
+            <h3>Santai tapi nempel</h3>
+            <p>
+              Belajar berasa ngobrol. Nyaman, seru, tapi tetap fokus target:
+              reading, writing, speaking, dan listening.
+            </p>
+            <div class="ws-card-foot">🎧 Speaking & listening</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EBOOK -->
+    <section class="ws-section" id="ebook">
+      <div class="ws-container">
+        <h2 class="ws-h2">Ebook Ringkas</h2>
+        <p class="ws-sub">Ringkasan materi + contoh soal. Cocok buat belajar cepat.</p>
+
+        <div class="ws-ebook">
+          <div class="ws-ebook-item">
+            <div class="ws-ebook-title">Ebook — Basic Tenses</div>
+            <div class="ws-ebook-sub">Present, Past, Future</div>
+            <button class="ws-btn ws-btn-primary small" type="button">Buka</button>
+          </div>
+
+          <div class="ws-ebook-item">
+            <div class="ws-ebook-title">Ebook — Reading Tips</div>
+            <div class="ws-ebook-sub">Skimming, scanning, inference</div>
+            <button class="ws-btn ws-btn-primary small" type="button">Buka</button>
+          </div>
+
+          <div class="ws-ebook-item">
+            <div class="ws-ebook-title">Ebook — TOEFL Structure</div>
+            <div class="ws-ebook-sub">Patterns & common traps</div>
+            <button class="ws-btn ws-btn-primary small" type="button">Buka</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFILE -->
+    <section class="ws-section" id="profile">
+      <div class="ws-container">
+        <h2 class="ws-h2">Profile</h2>
+        <div class="ws-profile">
+          <div class="ws-profile-left">
+            <div class="ws-avatar">👤</div>
+            <div>
+              <div class="ws-profile-name">Siswa Wisma Sinau</div>
+              <div class="ws-profile-email" id="userEmail">user@email</div>
+            </div>
+          </div>
+
+          <div class="ws-profile-right">
+            <div class="ws-kv"><span>Target</span><span>Naik Level Inggris</span></div>
+            <div class="ws-kv"><span>Rencana</span><span>20 menit / hari</span></div>
+            <div class="ws-kv"><span>Status</span><span>Aktif</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ws-footer">
+      <div class="ws-container ws-foot-inner">
+        <div>© <span id="year"></span> Wisma Sinau — English Course</div>
+        <div class="ws-foot-links">
+          <a href="#home">Home</a>
+          <a href="#program">Program</a>
+          <a href="#ebook">Ebook</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>
