@@ -1046,3 +1046,416 @@ html, body{
   z-index: 1;
   pointer-events:none;
 }
+
+.ws2-input{
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.10);
+  color: rgba(255,255,255,.92);
+  padding: 0 14px;
+  outline: none;
+  font-weight: 700;
+}
+
+.ws2-input::placeholder{ color: rgba(255,255,255,.70); }
+
+.ws2-input:focus{
+  box-shadow: 0 0 0 4px rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.28);
+}
+
+@media(max-width: 980px){
+  /* supaya form profile rapi di mobile */
+  .ws2-ebookGrid{ grid-template-columns: 1fr !important; }
+}
+
+/* =========================
+   PROFILE PAGE (tanpa ubah navbar)
+   ========================= */
+.ws-prof{
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+/* sidebar */
+.ws-prof-side{
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 22px;
+  padding: 14px;
+  backdrop-filter: blur(10px);
+  min-height: calc(100vh - 140px);
+}
+
+.ws-prof-side-title{
+  font-weight: 900;
+  opacity: .85;
+  margin: 6px 8px 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.ws-prof-nav{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  padding: 11px 12px;
+  border-radius: 16px;
+  text-decoration:none;
+  color: rgba(255,255,255,.86);
+  font-weight: 850;
+  border: 1px solid transparent;
+}
+.ws-prof-nav:hover{
+  background: rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.12);
+}
+.ws-prof-nav.active{
+  background: rgba(255,255,255,.16);
+  border-color: rgba(255,255,255,.16);
+  color: rgba(255,255,255,.95);
+}
+.ws-prof-ico{ width: 20px; text-align:center; opacity:.95; }
+
+.ws-prof-side-foot{
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,.12);
+  display:flex;
+  gap: 10px;
+  align-items:center;
+}
+.ws-prof-avatar-sm{
+  width: 40px; height: 40px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.14);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 900;
+}
+.ws-prof-footname{ font-weight: 900; }
+.ws-prof-footmail{ font-size: 12px; opacity: .8; margin-top: 2px; }
+
+/* main */
+.ws-prof-main{
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 22px;
+  padding: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.ws-prof-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 12px;
+}
+.ws-prof-title{
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+.ws-prof-sub{
+  margin: 6px 0 0;
+  color: rgba(255,255,255,.75);
+  font-weight: 700;
+}
+
+.ws-prof-add{
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.10);
+  color: rgba(255,255,255,.92);
+  font-weight: 900;
+  border-radius: 999px;
+  padding: 10px 14px;
+  cursor:pointer;
+}
+.ws-prof-add:hover{ background: rgba(255,255,255,.14); }
+
+/* tabs */
+.ws-prof-tabs{
+  display:flex;
+  gap: 8px;
+  margin-top: 12px;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  padding-bottom: 10px;
+}
+.ws-prof-tab{
+  border:0;
+  background: transparent;
+  color: rgba(255,255,255,.78);
+  font-weight: 900;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor:pointer;
+}
+.ws-prof-tab:hover{ background: rgba(255,255,255,.10); }
+.ws-prof-tab.active{
+  color: rgba(255,255,255,.95);
+  background: rgba(255,255,255,.12);
+}
+
+/* grid cards */
+.ws-prof-grid{
+  display:grid;
+  grid-template-columns: 340px 1fr;
+  gap: 12px;
+  margin-top: 14px;
+}
+.ws-prof-wide{ grid-column: 2 / 3; }
+
+.ws-prof-card{
+  background: rgba(255,255,255,.95);
+  color: #0f172a;
+  border-radius: 22px;
+  padding: 14px;
+  box-shadow: 0 18px 60px rgba(0,0,0,.20);
+}
+
+.ws-prof-cardhead{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.ws-prof-cardtitle{ font-weight: 900; }
+.ws-prof-link{
+  border:0;
+  background: transparent;
+  color: #0b4c62;
+  font-weight: 900;
+  cursor:pointer;
+  padding: 8px 10px;
+  border-radius: 999px;
+}
+.ws-prof-link:hover{ background: rgba(11,76,98,.08); }
+
+.ws-prof-user{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.ws-prof-avatar{
+  width: 52px; height: 52px;
+  border-radius: 18px;
+  background: rgba(11,76,98,.10);
+  color: #0b4c62;
+  font-weight: 900;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.ws-prof-name{ font-weight: 900; font-size: 16px; }
+.ws-prof-id{ font-weight: 800; color: rgba(15,23,42,.65); font-size: 12px; margin-top: 2px; }
+
+.ws-prof-section{ margin-top: 10px; }
+.ws-prof-section-title{
+  font-weight: 900;
+  font-size: 12px;
+  color: rgba(15,23,42,.70);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 8px;
+}
+.ws-prof-row{
+  display:flex;
+  justify-content:space-between;
+  gap: 12px;
+  padding: 8px 0;
+  font-weight: 800;
+}
+.ws-prof-label{ color: rgba(15,23,42,.70); }
+.ws-prof-value{ color: rgba(15,23,42,.92); }
+
+.ws-prof-divider{
+  height: 1px;
+  background: rgba(2,6,23,.10);
+  margin: 12px 0;
+}
+
+/* table */
+.ws-prof-table{
+  display:grid;
+  grid-template-columns: 1.1fr 1.2fr 1fr 1fr 1fr;
+  gap: 10px;
+  align-items:center;
+}
+.ws-prof-th{
+  font-size: 11px;
+  font-weight: 900;
+  color: rgba(15,23,42,.55);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(2,6,23,.10);
+}
+.ws-prof-td{
+  font-weight: 850;
+  color: rgba(15,23,42,.90);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(2,6,23,.08);
+}
+
+/* activity */
+.ws-prof-activity{ display:grid; gap: 10px; }
+.ws-prof-act{
+  display:flex;
+  gap: 10px;
+  align-items:flex-start;
+  padding: 10px;
+  border-radius: 16px;
+  background: rgba(11,76,98,.06);
+}
+.ws-prof-actava{
+  width: 34px; height: 34px;
+  border-radius: 14px;
+  background: rgba(11,76,98,.12);
+  color: #0b4c62;
+  font-weight: 900;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.ws-prof-acttitle{ font-weight: 900; }
+.ws-prof-actsub{ font-weight: 750; color: rgba(15,23,42,.70); margin-top: 3px; font-size: 12.5px; }
+
+/* paket */
+.ws-prof-payrow{ padding: 10px 0; }
+.ws-prof-paytop{ font-weight: 900; }
+.ws-prof-paysub{ font-weight: 750; color: rgba(15,23,42,.70); margin-top: 3px; }
+
+/* responsive */
+@media (max-width: 1100px){
+  .ws-prof{ grid-template-columns: 1fr; }
+  .ws-prof-side{ min-height: auto; }
+  .ws-prof-grid{ grid-template-columns: 1fr; }
+  .ws-prof-wide{ grid-column: auto; }
+  .ws-prof-table{ grid-template-columns: 1fr; }
+  .ws-prof-th{ display:none; }
+  .ws-prof-td{ border-bottom: 0; padding: 6px 0; }
+}
+/* footer profile seperti contoh */
+.ws-foot{
+  margin-top: 18px;
+  width: 100%;
+  padding: 18px 26px;
+  border-top: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 14px;
+  color: rgba(255,255,255,.85);
+  font-weight: 800;
+}
+
+.ws-foot-right{
+  display:flex;
+  gap: 18px;
+}
+
+.ws-foot-right a{
+  color: rgba(255,255,255,.90);
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.ws-foot-right a:hover{
+  text-decoration: underline;
+}
+
+/* responsive */
+@media (max-width: 700px){
+  .ws-foot{
+    flex-direction: column;
+    align-items:flex-start;
+  }
+}
+/* ===== Progress section (profile) ===== */
+.ws-prof-progress{
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+.ws-prof-progressHead{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 10px;
+}
+
+.ws-prof-h3{
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  color: rgba(255,255,255,.92);
+}
+
+.ws-prof-muted{
+  margin: 8px 0 12px;
+  color: rgba(255,255,255,.75);
+  font-weight: 700;
+}
+
+.ws-prof-pill{
+  display:inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.14);
+  font-weight: 900;
+  color: rgba(255,255,255,.92);
+}
+
+.ws-prof-progressGrid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* card versi soft (tetap senada, tapi konten progress jelas) */
+.ws-prof-card-soft{
+  background: rgba(255,255,255,.92);
+  color: #0f172a;
+}
+
+.ws-prof-bar{
+  margin-top: 10px;
+  height: 10px;
+  background: rgba(2,6,23,.10);
+  border-radius: 999px;
+  overflow:hidden;
+}
+
+.ws-prof-fill{
+  height:100%;
+  border-radius: 999px;
+  background: rgba(11,76,98,.88);
+}
+
+.ws-prof-barMeta{
+  display:flex;
+  justify-content:space-between;
+  gap: 10px;
+  margin-top: 8px;
+  font-weight: 850;
+  color: rgba(15,23,42,.75);
+  font-size: 13px;
+}
+
+@media (max-width: 900px){
+  .ws-prof-progressGrid{ grid-template-columns: 1fr; }
+}
+
+/* === panel switch (seolah ganti page) === */
+.ws-prof-panel{ display: none; }
+.ws-prof-panel.is-active{ display: block; }
