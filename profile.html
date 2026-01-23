@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wisma Sinau — Profile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="ws2-shell">
+    <!-- NAVBAR (sama seperti home,tapi Profile aktif)-->
+    <header class="ws-header">
+      <div class="ws-nav">
+        <a class="ws-brand" href="home.html">
+          <span class="ws-mark">WS</span>
+          <span class="ws-brand-name">Wisma Sinau</span>
+        </a>
+
+        <button class="ws-burger" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="ws-menu" id="navMenu">
+          <a class="ws-link" href="home.html">Home</a>
+          <a class="ws-link" href="home.html#program">Program</a>
+          <a class="ws-link" href="home.html#tryout">Try out</a>
+          <a class="ws-link" href="home.html#ebook">Ebook</a>
+          <a class="ws-link active" href="profile.html">Profile</a>
+
+          <div class="ws-nav-right">
+            <div class="ws-search">
+              <input id="searchInput" type="text" placeholder="Cari materi..." />
+            </div>
+            <button class="ws-btn ws-btn-outline" type="button" id="buyBtn">Ambil Paket</button>
+            <button class="ws-btn ws-btn-primary" type="button" id="logoutBtn">Logout</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="ws-prof">
+      <!-- sidebar kiri -->
+      <aside class="ws-prof-side">
+        <div class="ws-prof-side-title">My Info</div>
+
+        <a class="ws-prof-nav active" href="profile.html">
+          <span class="ws-prof-ico">👤</span> Profile
+        </a>
+        <a class="ws-prof-nav" href="#progress" id="sideProgress">
+          <span class="ws-prof-ico">🏆</span> Progress
+        </a>
+        <a class="ws-prof-nav" href="#">
+          <span class="ws-prof-ico">🧩</span> Emergency Contact
+        </a>
+        <a class="ws-prof-nav" href="#">
+          <span class="ws-prof-ico">⏱️</span> Time Off
+        </a>
+        <a class="ws-prof-nav" href="#files" id="sideFiles">
+          <span class="ws-prof-ico">📁</span> Files
+        </a>
+
+        <div class="ws-prof-side-foot">
+          <div class="ws-prof-avatar-sm">WS</div>
+          <div class="ws-prof-foottext">
+            <div class="ws-prof-footname" id="sideName">Student</div>
+            <div class="ws-prof-footmail" id="sideEmail">-</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- konten kanan -->
+      <section class="ws-prof-main">
+        <div class="ws-prof-head">
+          <div>
+            <h2 class="ws-prof-title">Profile</h2>
+            <p class="ws-prof-sub">Kelola data akun kamu (demo).</p>
+          </div>
+
+          <button class="ws-prof-add" type="button" id="editBtn">+ Edit Profile</button>
+        </div>
+
+        <!-- tabs -->
+        <div class="ws-prof-tabs">
+          <button class="ws-prof-tab active" type="button" data-tab="overview">Overview</button>
+          <button class="ws-prof-tab" type="button" data-tab="progress">Progress</button>
+          <button class="ws-prof-tab" type="button" data-tab="files">Files</button>
+          <button class="ws-prof-tab" type="button" data-tab="settings">Settings</button>
+        </div>
+
+        <!-- =======================
+                PANELS (ganti page)
+              ======================= -->
+        
+        <!-- PANEL:OVERVIEW -->
+        <div class="ws-prof-panel is active" data-panel="overview" >
+            <div class="ws-prof-grid">
+                <!-- card kiri (profile ringkas) -->
+                 <article class="ws-prof-card">
+                    <div class="ws-prof-user">
+                        <div class="ws-prof-avatar" id="avatarCircle">WS</div>
+                        <div>
+                            <div class="ws-prof-name" id="fullName">Wisma Student</div>
+                            <div class="ws-prof-id" id="userId">#WS000001</div>
+                        </div>
+                    </div>
+
+                    <div class="ws-prof-sdction">
+                        <div class="ws-prof-section-title">About</div>
+                        <div class="ws-prof-row">
+                            <span class="ws-prof-label">📞 Phone</span>
+                            <span class="ws-prof-value" id="phoneText">-</span>
+                        </div>
+                        <div class="ws-prof-row">
+                            <span class="ws-prof-label">✉️ Email</span>
+                            <span class="ws-prof-value" id="emailText">-</span>
+                        </div>
+                    </div>
+
+                    <div class="ws-prof-divider"></div>
+
+                    <div class="ws-prof-section">
+                        <div class="ws-prof-section-title">Address</div>
+                        <div class="ws-prof-row">
+                            <span class="ws-prof-label">📍 City</span>
+                            <span class="ws-prof-value" id="cityText">-</span>
+                        </div>
+                         <div class="ws-prof-row">
+                            <span class="ws-prof-label">🏷️ Level</span>
+                            <span class="ws-prof-value" id="levelText">Beginner</span>
+                        </div>
+                    </div>
+
+                    <div class="ws-prof-divider"></div>
+
+                    <div class="ws-prof-section">
+                        <div class="ws-prof-section-title">Student Details</div>
+                        <div class="ws-prof-row">
+                            <span class="ws-prof-label">🎯 Target</span>
+                            <span class="ws-prof-value" id="targetText">TOEFL / School</span>
+                        </div>
+                        <div class="ws-prof-row">
+                            <span class="ws-prof-label">📚 Program</span>
+                            <span class="ws-prof-value">SD / SMP / SMA / TOEFL</span>
+                        </div>
+                 </article>
+
+                 <!-- card kanan atas -->
+                 <article class="ws-prof-card ws-prof-wide">
+                    <div class="ws-prof-cardhead">
+                        <div class="ws-prof-cardtitle">Learning Information</div>
+                        <button class="ws-prof-link" type="button">+ Add Info</button>
+                    </div>
+
+                    <div class="ws-prof-table">
+                        <div class="ws-prof-th">TRACK</div>
+                        <div class="ws-prof-th">FOCUS</div>
+                        <div class="ws-prof-th">MENTOR</div>
+                        <div class="ws-prof-th">START DATE</div>
+                        <div class="ws-prof-th">LOCATION</div>
+
+                        <div class="ws-prof-td" id="trackText">TOEFL Track</div>
+                        <div class="ws-prof-td" id="focusText">Reading & Listening</div>
+                        <div class="ws-prof-td" id="mentorText">Mentor 1</div>
+                        <div class="ws-prof-td" id="startDateText">-</div>
+                        <div class="ws-prof-td" id="locText">Online</div>
+                    </div>
+                 </article>
+
+                 <!-- bawah kiri: activity -->
+                  <article class="ws-prof-card">
+                    <div class="ws-prof-cardhead">
+                        <div class="ws-prof-cardtitle">Activity</div>
+                        <button class="ws-prof-link" type="button">View all</button>
+                    </div>
+
+                    <div class="ws-prof-activity">
+                        <div class="ws-prof-act">
+                            <div class="ws-prof-actava">A</div>
+                            <div>
+                                <div class="ws-prof-acttitle">Login terakhir</div>
+                                <div class="ws-prof-actsub" id="lastLoginText">-</div>
+                            </div>
+                        </div>
+
+                        <div class="ws-prof-act">
+                            <div class="ws-prof-actava">Q</div>
+                            <div>
+                                <div class="ws-prof-acttitle">Quiz selesai</div>
+                                <div class="ws-prof-actsub">Grammar Basics — 10/15</div>
+                            </div>
+                        </div>
+
+                        <div class="ws-prof-act">
+                            <div class="ws-prof-actava">E</div>
+                            <div>
+                                <div class="ws-prof-acttitle">Ebook diunduh</div>
+                                <div class="ws-prof-actsub">Tenses Quick Guide</div>
+                            </div>
+                        </div>
+                    </div>
+                  </article>
+                  
+                <!-- bawah kanan: paket -->
+                 <article class="ws-prof-card">
+                    <div class="ws-prof-cardhead">
+                        <div class="ws-prof-cardtitle">Paket</div>
+                        <button class="ws-prof-link" type="button">View all</button>
+                    </div>
+
+                    <div class="ws-prof-pay">
+                        <div class="ws-prof-payrow">
+                            <div class="ws-prof-paytop">Basic (Demo)</div>
+                            <div class="ws-prof-paysub">Limited access</div>
+                        </div>
+
+                        <div class="ws-prof-divider"></div>
+
+                        <div class="ws-prof-payrow">
+                            <div class="ws-prof-paytop">Premium</div>
+                            <div class="ws-prof-paysub">Akses semua materi & tryout</div>
+                        </div>
+
+                        <div class="ws-prof-divider"></div>
+
+                        <div class="ws-prof-payrow">
+                            <div class="ws-prof-paytop">TOEFL Intensive</div>
+                            <div class="ws-prof-paysub">Simulasi + strategi target skor</div>
+                        </div>
+                    </div>
+                 </article>
+            </div>
+        </div>
+
+        <!-- PANEL: PROGRESS -->
+         <div class="ws-prof-panel" data-panel="progress">
+            <div class="ws-prof-progressHead" style="margin-top:14px;">
+                <h3 class="ws-prof-h3">Progress Belajar</h3>
+                <div class="ws-prof-pill" id="overallPct">0%</div>
+            </div>
+
+            <p class="ws-prof-muted">
+                Ringkasan progres kamu (demo). Nanti bisa dihubungkan ke backend.
+            </p>
+
+            <div class="ws-prof-progressGrid">
+                <article class="ws-prof-card ws-prof-card-soft">
+                    <div class="ws-prof-cardtitle">SD — English Fun</div>
+                    <div class="ws-prof-bar"><div class="ws-prof-fill" id="pSD" style="width:35%"></div></div>
+                    <div class="ws-prof-barMeta"><span>Vocabulary</span><span id="pSDText">35%</span></div>
+                </article>
+
+                <article class="ws-prof-card ws-prof-card-soft">
+                    <div class="ws-prof-cardtitle">SMP — Grammar Basics</div>
+                    <div class="ws-prof-bar"><div class="ws-prof-fill" id="pSMP" style="width:62%"></div></div>
+                    <div class="ws-prof-barMeta"><span>Tenses & Reading</span><span id="pSMPText">62%</span></div>
+                </article>
+
+                <article class="ws-prof-card ws-prof-card-soft">
+                    <div class="ws-prof-cardtitle">SMA — Exam Ready</div>
+                    <div class="ws-prof-bar"><div class="ws-prof-fill" id="pSMA" style="width:48%"></div></div>
+                    <div class="ws-prof-barMeta"><span>Practice</span><span id="pSMAText">48%</span></div>
+                </article>
+
+                <article class="ws-prof-card ws-prof-card-soft">
+                    <div class="ws-prof-cardtitle">TOEFL Track</div>
+                    <div class="ws-prof-bar"><div class="ws-prof-fill" id="pTOEFL" style="width:27%"></div></div>
+                    <div class="ws-prof-barMeta"><span>Listening & Structure</span><span id="pTOEFLText">27%</span></div>
+                </article>
+            </div>
+         </div>
+
+        <!-- PANEL: FILES -->
+         <div class="ws-prof-panel" data-panel="files">
+            <div style="margin-top:14px;" class="ws-prof-card ws-prof-card-soft">
+                <div class="ws-prof-cardtitle">Files</div>
+                <div style="margin-top:6px; font-weight:800; color:rgba(15,23,42,.75);">
+                    Belum ada file (demo)
+                </div>
+            </div>
+         </div>
+
+        <!-- PANEL: SETTINGS -->
+         <div class="ws-prof-panel" data-panel="settings">
+            <div style="margin-top:14px;" class="ws-prof-card ws-prof-card-soft">
+                <div class="ws-prof-cardtitle">Settings</div>
+                <div style="margin-top:6px; font-weight:800; color:rgba(15,23,42,.75);">
+                    Pengaturan belum diaktifkan (demo).
+                </div>
+            </div>
+         </div>
+      </section>
+    </main>
+
+    <footer class="ws-foot">
+      <div class="ws-foot-left">© <span id="year"></span> Wisma Sinau — English Course</div>
+      <div class="ws-foot-right">
+        <a href="home.html#home">Home</a>
+        <a href="home.html#program">Program</a>
+        <a href="home.html#ebook">Ebook</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>
